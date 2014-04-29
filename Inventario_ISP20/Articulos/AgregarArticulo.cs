@@ -17,19 +17,22 @@ namespace Articulos
         {
             InitializeComponent();
             miComando = miComand;
+            //MessageBox.Show("AAA");
+            
+            
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
             miComando.CommandText = "dbo.insertar_articulo";
-            //creamos los parametros que necesita el procedimiento
+            //agregamos los parametros que necesita el procedimiento
             //insertar_articulo
 
 
-            miComando.Parameters.AddWithValue("@det",txtdetalle.Text);
-            miComando.Parameters.AddWithValue("@obs", txtobservaciones.Text);
-            miComando.Parameters.AddWithValue("@lar", nudlargo.Value);
-            miComando.Parameters.AddWithValue("@anc", Convert.ToDecimal(mtbancho.Text));
+            miComando.Parameters.AddWithValue("@det",txtDetalle.Text);
+            miComando.Parameters.AddWithValue("@obs", txtObservaciones.Text);
+            miComando.Parameters.AddWithValue("@lar", nudLargo.Value);
+            miComando.Parameters.AddWithValue("@anc", nudAncho.Value);
 
             if (miComando.ExecuteNonQuery() == 1)
                 MessageBox.Show("Datos guardados correctamente");
@@ -42,9 +45,51 @@ namespace Articulos
 
         }
 
-        private void maskedTextBox1_Leave(object sender, EventArgs e)
+        
+
+        private void txtdetalle_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(mtbancho.Text);
+
         }
+
+        private void txtdetalle_Enter(object sender, EventArgs e)
+        {
+            //txtdetalle.SelectionStart = 2;
+        }
+
+        private void txtdetalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           // MessageBox.Show("A"); 
+            if (e.KeyChar == (char)(Keys.Enter))
+            {
+                //MessageBox.Show("A");
+                e.Handled = true;
+                SendKeys.Send("{TAB}");
+            }        
+        }
+
+        private void mtbancho_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void AgregarArticulo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudlargo_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }

@@ -28,25 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtdetalle = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.txtDetalle = new System.Windows.Forms.TextBox();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.lblObservaciones = new System.Windows.Forms.Label();
-            this.txtobservaciones = new System.Windows.Forms.TextBox();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
             this.lbllargo = new System.Windows.Forms.Label();
-            this.nudlargo = new System.Windows.Forms.NumericUpDown();
-            this.mtbancho = new System.Windows.Forms.MaskedTextBox();
+            this.nudLargo = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.nudlargo)).BeginInit();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nudAncho = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLargo)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAncho)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtdetalle
+            // txtDetalle
             // 
-            this.txtdetalle.Location = new System.Drawing.Point(115, 22);
-            this.txtdetalle.Name = "txtdetalle";
-            this.txtdetalle.Size = new System.Drawing.Size(203, 20);
-            this.txtdetalle.TabIndex = 0;
+            this.txtDetalle.Location = new System.Drawing.Point(115, 22);
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.Size = new System.Drawing.Size(203, 20);
+            this.txtDetalle.TabIndex = 0;
+            this.txtDetalle.TextChanged += new System.EventHandler(this.txtdetalle_TextChanged);
+            this.txtDetalle.Enter += new System.EventHandler(this.txtdetalle_Enter);
+            this.txtDetalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdetalle_KeyPress);
             // 
             // lblDetalle
             // 
@@ -66,30 +74,30 @@
             this.lblObservaciones.TabIndex = 3;
             this.lblObservaciones.Text = "Observaciones:";
             // 
-            // txtobservaciones
+            // txtObservaciones
             // 
-            this.txtobservaciones.Location = new System.Drawing.Point(115, 60);
-            this.txtobservaciones.Multiline = true;
-            this.txtobservaciones.Name = "txtobservaciones";
-            this.txtobservaciones.Size = new System.Drawing.Size(203, 55);
-            this.txtobservaciones.TabIndex = 2;
+            this.txtObservaciones.Location = new System.Drawing.Point(115, 60);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(203, 55);
+            this.txtObservaciones.TabIndex = 2;
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(88, 205);
+            this.btnguardar.Location = new System.Drawing.Point(83, 227);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(75, 23);
-            this.btnguardar.TabIndex = 4;
+            this.btnguardar.TabIndex = 5;
             this.btnguardar.Text = "&Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(190, 205);
+            this.btncancelar.Location = new System.Drawing.Point(185, 227);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(75, 23);
-            this.btncancelar.TabIndex = 5;
+            this.btncancelar.TabIndex = 6;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
             // 
@@ -102,28 +110,20 @@
             this.lbllargo.TabIndex = 6;
             this.lbllargo.Text = "Largo(mts):";
             // 
-            // nudlargo
+            // nudLargo
             // 
-            this.nudlargo.DecimalPlaces = 2;
-            this.nudlargo.Location = new System.Drawing.Point(115, 137);
-            this.nudlargo.Maximum = new decimal(new int[] {
+            this.nudLargo.DecimalPlaces = 2;
+            this.nudLargo.Location = new System.Drawing.Point(115, 137);
+            this.nudLargo.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudlargo.Name = "nudlargo";
-            this.nudlargo.Size = new System.Drawing.Size(120, 20);
-            this.nudlargo.TabIndex = 8;
-            // 
-            // mtbancho
-            // 
-            this.mtbancho.Location = new System.Drawing.Point(115, 173);
-            this.mtbancho.Mask = "99.99";
-            this.mtbancho.Name = "mtbancho";
-            this.mtbancho.Size = new System.Drawing.Size(120, 20);
-            this.mtbancho.TabIndex = 9;
-            this.mtbancho.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            this.mtbancho.Leave += new System.EventHandler(this.maskedTextBox1_Leave);
+            this.nudLargo.Name = "nudLargo";
+            this.nudLargo.Size = new System.Drawing.Size(120, 20);
+            this.nudLargo.TabIndex = 3;
+           
+            
             // 
             // label1
             // 
@@ -134,25 +134,56 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Ancho(mts):";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(97, 26);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // nudAncho
+            // 
+            this.nudAncho.DecimalPlaces = 2;
+            this.nudAncho.Location = new System.Drawing.Point(115, 176);
+            this.nudAncho.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudAncho.Name = "nudAncho";
+            this.nudAncho.Size = new System.Drawing.Size(120, 20);
+            this.nudAncho.TabIndex = 11;
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 262);
+            this.ClientSize = new System.Drawing.Size(567, 368);
+            this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.nudAncho);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.mtbancho);
-            this.Controls.Add(this.nudlargo);
+            this.Controls.Add(this.nudLargo);
             this.Controls.Add(this.lbllargo);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.lblObservaciones);
-            this.Controls.Add(this.txtobservaciones);
+            this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.lblDetalle);
-            this.Controls.Add(this.txtdetalle);
+            this.Controls.Add(this.txtDetalle);
             this.Name = "AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Articulo";
-            ((System.ComponentModel.ISupportInitialize)(this.nudlargo)).EndInit();
+            this.Load += new System.EventHandler(this.AgregarArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudLargo)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudAncho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,15 +191,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtdetalle;
+        private System.Windows.Forms.TextBox txtDetalle;
         private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.Label lblObservaciones;
-        private System.Windows.Forms.TextBox txtobservaciones;
+        private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Label lbllargo;
-        private System.Windows.Forms.NumericUpDown nudlargo;
-        private System.Windows.Forms.MaskedTextBox mtbancho;
+        private System.Windows.Forms.NumericUpDown nudLargo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown nudAncho;
     }
 }

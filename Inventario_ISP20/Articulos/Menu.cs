@@ -19,6 +19,7 @@ namespace Articulos
         {
             InitializeComponent();
             EstablecerConexionYComando();
+          
         }
 
         private void EstablecerConexionYComando()
@@ -41,6 +42,40 @@ namespace Articulos
         {
             Form nuevoArticulo = new AgregarArticulo(miComando);
             nuevoArticulo.ShowDialog();
+        }
+
+
+
+
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            //Articulos.Properties.Resources.tituloaplicacion = textBox2.Text;
+            //Articulos.Properties.Resources.tituloaplicacion.sa
+        }
+
+        private void salirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string mensaje = "¿Está seguro que desea salir del sistema?";
+            string titulo = "Salir del sistema";
+            DialogResult respuesta=MessageBox.Show(mensaje, titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                //si pulsan que si cierra el formulario
+                //(no cancela el cierre)
+                e.Cancel = false;
+            }
+            else
+            {
+                //si pulsan que no cierra el formulario
+                //(si cancela el cierre)
+                e.Cancel = true;
+            }
         }
 
 

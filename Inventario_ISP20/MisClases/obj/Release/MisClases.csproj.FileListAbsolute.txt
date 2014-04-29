@@ -1,0 +1,8 @@
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\ResolveAssemblyReference.cache
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\MisClases.TextBoxEnter.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\GenerateResource.read.1.tlog
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\GenerateResource.write.1.tlog
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\bin\Release\MisClases.dll
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\bin\Release\MisClases.pdb
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\MisClases.dll
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\MisClases.pdb

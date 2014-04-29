@@ -102,6 +102,7 @@
             this.salirDelSistemaToolStripMenuItem.Name = "salirDelSistemaToolStripMenuItem";
             this.salirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.salirDelSistemaToolStripMenuItem.Text = "Salir del sistema";
+            this.salirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.salirDelSistemaToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -119,6 +120,7 @@
             this.Name = "Menu";
             this.Text = "Inventario ISP20";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.MenuInventario.ResumeLayout(false);
             this.MenuInventario.PerformLayout();
             this.ResumeLayout(false);

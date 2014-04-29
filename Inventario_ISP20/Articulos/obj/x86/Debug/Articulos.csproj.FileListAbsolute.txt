@@ -8,3 +8,5 @@ C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\G
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.exe
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.pdb
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.AgregarArticulo.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\MisClases.dll
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\MisClases.pdb
