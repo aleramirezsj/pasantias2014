@@ -10,3 +10,6 @@ C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\A
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.AgregarArticulo.resources
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\MisClases.dll
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\MisClases.pdb
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.GestionArticulos.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\Articulos.exe.config
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.ParametrosDelSistema.resources

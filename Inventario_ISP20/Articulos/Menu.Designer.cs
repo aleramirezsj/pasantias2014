@@ -87,6 +87,7 @@
             this.configuraciónDelServidorToolStripMenuItem.Name = "configuraciónDelServidorToolStripMenuItem";
             this.configuraciónDelServidorToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.configuraciónDelServidorToolStripMenuItem.Text = "Configuración del servidor";
+            this.configuraciónDelServidorToolStripMenuItem.Click += new System.EventHandler(this.configuraciónDelServidorToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 

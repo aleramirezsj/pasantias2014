@@ -22,15 +22,32 @@ namespace Articulos
           
         }
 
-        private void EstablecerConexionYComando()
+        public void EstablecerConexionYComando()
         {
             miConexion = new SqlConnection();
-            miConexion.ConnectionString = "Data Source= NBRAR\\SQLEXPRESS2008 ";
-            miConexion.ConnectionString += ";Initial Catalog = inventario_isp20_2014 ";
-            miConexion.ConnectionString += ";User Id = sa ";
-            miConexion.ConnectionString += ";Password = 123 ";
-            miConexion.Open();
-
+            //levantamos las configuraciones del proyecto y armamos
+            //variables para utilizarlas en la cadena de conexión
+            /*
+            string servidor = Articulos.Properties.Settings.Default.servidor;
+            string bbdd = Articulos.Properties.Settings.Default.bbdd;
+            string usuario = Articulos.Properties.Settings.Default.usuario;
+            string contrasenia = Articulos.Properties.Settings.Default.contrasenia;
+            miConexion.ConnectionString = "Data Source= "+servidor;
+            miConexion.ConnectionString += " ;Initial Catalog = "+bbdd;
+            miConexion.ConnectionString += " ;User Id = "+usuario;
+            miConexion.ConnectionString += " ;Password = "+contrasenia;
+            */
+            miConexion.ConnectionString = ObtenerCadenaConexion();
+            //MessageBox.Show(miConexion.ConnectionString);
+            try
+            {
+                miConexion.Open();
+            }
+            catch
+            {
+                ParametrosDelSistema parametrosDelSistema = new ParametrosDelSistema(miConexion);
+                parametrosDelSistema.ShowDialog();
+            }
             //Creamo el objeto sqlcommand
             miComando = new SqlCommand();
             //establecemos con que conexión trabaja
@@ -58,7 +75,18 @@ namespace Articulos
         {
             this.Close();
         }
-
+        public static string ObtenerCadenaConexion()
+        {
+            string servidor = Articulos.Properties.Settings.Default.servidor;
+            string bbdd = Articulos.Properties.Settings.Default.bbdd;
+            string usuario = Articulos.Properties.Settings.Default.usuario;
+            string contrasenia = Articulos.Properties.Settings.Default.contrasenia;
+            string cadenaConexion = "Data Source= " + servidor;
+            cadenaConexion += " ;Initial Catalog = " + bbdd;
+            cadenaConexion += " ;User Id = " + usuario;
+            cadenaConexion += " ;Password = " + contrasenia;
+            return cadenaConexion;
+        }
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             string mensaje = "¿Está seguro que desea salir del sistema?";
@@ -77,6 +105,14 @@ namespace Articulos
                 e.Cancel = true;
             }
         }
+
+        private void configuraciónDelServidorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ParametrosDelSistema parametrosDelSistema = new ParametrosDelSistema(miConexion);
+            parametrosDelSistema.ShowDialog();
+        }
+
+
 
 
 

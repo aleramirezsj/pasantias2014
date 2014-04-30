@@ -25,13 +25,49 @@ namespace Articulos.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("TEXTO-EN EL FORMULARIO")]
-        public string textoformulario {
+        [global::System.Configuration.DefaultSettingValueAttribute("NBRAR\\SQLEXPRESS2008")]
+        public string servidor {
             get {
-                return ((string)(this["textoformulario"]));
+                return ((string)(this["servidor"]));
             }
             set {
-                this["textoformulario"] = value;
+                this["servidor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("inventario_isp20_2014")]
+        public string bbdd {
+            get {
+                return ((string)(this["bbdd"]));
+            }
+            set {
+                this["bbdd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("sa")]
+        public string usuario {
+            get {
+                return ((string)(this["usuario"]));
+            }
+            set {
+                this["usuario"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("123")]
+        public string contrasenia {
+            get {
+                return ((string)(this["contrasenia"]));
+            }
+            set {
+                this["contrasenia"] = value;
             }
         }
     }

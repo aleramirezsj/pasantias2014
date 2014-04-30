@@ -2,8 +2,17 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Articulos.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="textoformulario" Type="System.String" Scope="User">
-      <Value Profile="(Default)">TEXTO-EN EL FORMULARIO</Value>
+    <Setting Name="servidor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NBRAR\SQLEXPRESS2008</Value>
+    </Setting>
+    <Setting Name="bbdd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">inventario_isp20_2014</Value>
+    </Setting>
+    <Setting Name="usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="contrasenia" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123</Value>
     </Setting>
   </Settings>
 </SettingsFile>
