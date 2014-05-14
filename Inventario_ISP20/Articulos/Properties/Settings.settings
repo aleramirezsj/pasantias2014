@@ -14,5 +14,8 @@
     <Setting Name="contrasenia" Type="System.String" Scope="User">
       <Value Profile="(Default)">123</Value>
     </Setting>
+    <Setting Name="imagenFondo" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

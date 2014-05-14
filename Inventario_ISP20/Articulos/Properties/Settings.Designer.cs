@@ -70,5 +70,17 @@ namespace Articulos.Properties {
                 this["contrasenia"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string imagenFondo {
+            get {
+                return ((string)(this["imagenFondo"]));
+            }
+            set {
+                this["imagenFondo"] = value;
+            }
+        }
     }
 }

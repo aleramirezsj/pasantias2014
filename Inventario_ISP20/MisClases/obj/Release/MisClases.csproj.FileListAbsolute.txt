@@ -6,3 +6,5 @@ C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\bin\Release\Mis
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\bin\Release\MisClases.pdb
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\MisClases.dll
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\MisClases.pdb
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\MisClases.MiTextBoxEnter.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Release\MisClases.TextBoxEnterMio.resources

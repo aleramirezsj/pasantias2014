@@ -37,7 +37,12 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stsBarraEstado = new System.Windows.Forms.StatusStrip();
+            this.tslMensajeBarraEstado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pbxImagenFondo = new System.Windows.Forms.PictureBox();
             this.MenuInventario.SuspendLayout();
+            this.stsBarraEstado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuInventario
@@ -111,19 +116,48 @@
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de...";
             // 
+            // stsBarraEstado
+            // 
+            this.stsBarraEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tslMensajeBarraEstado});
+            this.stsBarraEstado.Location = new System.Drawing.Point(0, 240);
+            this.stsBarraEstado.Name = "stsBarraEstado";
+            this.stsBarraEstado.Size = new System.Drawing.Size(478, 22);
+            this.stsBarraEstado.TabIndex = 1;
+            // 
+            // tslMensajeBarraEstado
+            // 
+            this.tslMensajeBarraEstado.Name = "tslMensajeBarraEstado";
+            this.tslMensajeBarraEstado.Size = new System.Drawing.Size(0, 17);
+            // 
+            // pbxImagenFondo
+            // 
+            this.pbxImagenFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbxImagenFondo.Location = new System.Drawing.Point(0, 24);
+            this.pbxImagenFondo.Name = "pbxImagenFondo";
+            this.pbxImagenFondo.Size = new System.Drawing.Size(478, 216);
+            this.pbxImagenFondo.TabIndex = 2;
+            this.pbxImagenFondo.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 262);
+            this.Controls.Add(this.pbxImagenFondo);
+            this.Controls.Add(this.stsBarraEstado);
             this.Controls.Add(this.MenuInventario);
             this.MainMenuStrip = this.MenuInventario;
             this.Name = "Menu";
             this.Text = "Inventario ISP20";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
+            this.Shown += new System.EventHandler(this.Menu_Shown);
             this.MenuInventario.ResumeLayout(false);
             this.MenuInventario.PerformLayout();
+            this.stsBarraEstado.ResumeLayout(false);
+            this.stsBarraEstado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenFondo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,6 +174,9 @@
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraciónDelServidorToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip stsBarraEstado;
+        private System.Windows.Forms.ToolStripStatusLabel tslMensajeBarraEstado;
+        private System.Windows.Forms.PictureBox pbxImagenFondo;
     }
 }
 

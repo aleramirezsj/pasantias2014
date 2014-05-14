@@ -8,3 +8,8 @@ C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\GenerateResource.write.1.tlog
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.exe
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.pdb
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Release\Articulos.exe.config
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Release\MisClases.dll
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Release\MisClases.pdb
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.GestionArticulos.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.ParametrosDelSistema.resources

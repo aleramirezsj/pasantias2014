@@ -18,8 +18,8 @@ namespace Articulos
         public Menu()
         {
             InitializeComponent();
-            EstablecerConexionYComando();
-          
+            //EstablecerConexionYComando();
+            
         }
 
         public void EstablecerConexionYComando()
@@ -27,27 +27,23 @@ namespace Articulos
             miConexion = new SqlConnection();
             //levantamos las configuraciones del proyecto y armamos
             //variables para utilizarlas en la cadena de conexión
-            /*
-            string servidor = Articulos.Properties.Settings.Default.servidor;
-            string bbdd = Articulos.Properties.Settings.Default.bbdd;
-            string usuario = Articulos.Properties.Settings.Default.usuario;
-            string contrasenia = Articulos.Properties.Settings.Default.contrasenia;
-            miConexion.ConnectionString = "Data Source= "+servidor;
-            miConexion.ConnectionString += " ;Initial Catalog = "+bbdd;
-            miConexion.ConnectionString += " ;User Id = "+usuario;
-            miConexion.ConnectionString += " ;Password = "+contrasenia;
-            */
+            
             miConexion.ConnectionString = ObtenerCadenaConexion();
             //MessageBox.Show(miConexion.ConnectionString);
             try
             {
+                string mensaje="Estableciendo conexión con el servidor de bases de datos...";
+                tslMensajeBarraEstado.Text = mensaje;
+                
                 miConexion.Open();
             }
             catch
             {
-                ParametrosDelSistema parametrosDelSistema = new ParametrosDelSistema(miConexion);
+               
+                ParametrosDelSistema parametrosDelSistema = new ParametrosDelSistema(miConexion,this);
                 parametrosDelSistema.ShowDialog();
             }
+            tslMensajeBarraEstado.Text = "";
             //Creamo el objeto sqlcommand
             miComando = new SqlCommand();
             //establecemos con que conexión trabaja
@@ -108,9 +104,22 @@ namespace Articulos
 
         private void configuraciónDelServidorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ParametrosDelSistema parametrosDelSistema = new ParametrosDelSistema(miConexion);
+            ParametrosDelSistema parametrosDelSistema = new ParametrosDelSistema(miConexion,this);
             parametrosDelSistema.ShowDialog();
         }
+
+        private void Menu_Shown(object sender, EventArgs e)
+        {
+            EstablecerConexionYComando();
+            
+        }
+
+        public void EstablecerFondo()
+        {
+            pbxImagenFondo.ImageLocation = Articulos.Properties.Settings.Default.imagenFondo;
+        }
+
+
 
 
 

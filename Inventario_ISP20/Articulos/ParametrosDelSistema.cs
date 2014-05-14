@@ -13,11 +13,14 @@ namespace Articulos
     public partial class ParametrosDelSistema : Form
     {
         private SqlConnection miConexion;
+        private Menu miMenu;
 
-        public ParametrosDelSistema(SqlConnection miConex)
+        public ParametrosDelSistema(SqlConnection miConex, Menu menu)
         {
             InitializeComponent();
             miConexion = miConex;
+            miMenu = menu;
+            MessageBox.Show(miMenu.ToString());
         }
 
         private void txtServidor_TextChanged(object sender, EventArgs e)
@@ -49,7 +52,7 @@ namespace Articulos
             {
                 //guarda la configuración
                 //apago el formulario para que no puedan hacer cambios
-                //hasta que no ser resuelva si se conecta o no
+                //hasta que no se resuelva si se conecta o no
                 this.Enabled = false;
                 //guardo las propiedades definidas en el formulario
                 Articulos.Properties.Settings.Default.Save();
@@ -58,18 +61,18 @@ namespace Articulos
                 miConexion.Close();
                 //obtengo el connection string con las nuevas configuraciones
                 //utilizando el método estátito asociado a la clase Menu
-                //al establecer el método como Public y Static se puede llamar
-                //de esta manera especial
+                //(al establecer el método como Public y Static se puede llamar
+                //de esta manera especial)
 
                 miConexion.ConnectionString = Articulos.Menu.ObtenerCadenaConexion();
                 
                 //MessageBox.Show(miConexion.ConnectionString);
                 try
                 {
-                    
-                    
+                                        
                     miConexion.Open();
                     MessageBox.Show("Conexión establecida con éxito");
+                    this.Close();
                 }
                 catch
                 {
@@ -90,6 +93,26 @@ namespace Articulos
         {
             Articulos.Properties.Settings.Default.Reset();
             this.Close();
+        }
+
+        private void btnExaminar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdAbrirArchivo = new OpenFileDialog();
+            string filtro = "JPG (*.jpg)|*.jpg";
+            filtro += "|GIF (*.gif)|*.gif";
+            filtro += "|PNG (*.png)|*.png";
+            filtro += "|BMP (*.bmp)|*.bmp";
+            ofdAbrirArchivo.Filter = filtro;
+            ofdAbrirArchivo.ShowDialog();
+            pbxImagenFondo.ImageLocation = ofdAbrirArchivo.FileName;
+        }
+
+        private void btnAplicar_Click(object sender, EventArgs e)
+        {
+            Articulos.Properties.Settings.Default.imagenFondo = pbxImagenFondo.ImageLocation;
+            Articulos.Properties.Settings.Default.Save();
+
+            miMenu.EstablecerFondo();
         }
 
 
