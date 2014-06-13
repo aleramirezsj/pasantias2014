@@ -1,0 +1,10 @@
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\Articulos.exe
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\Articulos.pdb
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.Menu.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.Properties.Resources.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.exe
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.pdb
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.AgregarArticulo.resources
