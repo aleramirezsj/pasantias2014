@@ -56,6 +56,18 @@
     <Compile Include="AgregarArticulo.Designer.cs">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat.Designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarArticulo.Designer.cs">
+      <DependentUpon>EditarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AgregarArticulo.resx">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat.resx">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarArticulo.resx">
+      <DependentUpon>EditarArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionArticulos.resx">
       <DependentUpon>GestionArticulos.cs</DependentUpon>

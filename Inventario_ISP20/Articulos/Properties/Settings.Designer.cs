@@ -73,7 +73,7 @@ namespace Articulos.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("E:\\Archivos Personales\\Mis Imágenes\\portada-isp20.png")]
         public string imagenFondo {
             get {
                 return ((string)(this["imagenFondo"]));

@@ -37,14 +37,14 @@
             this.lblBbdd = new System.Windows.Forms.Label();
             this.lblServidor = new System.Windows.Forms.Label();
             this.tbpImagenFondo = new System.Windows.Forms.TabPage();
+            this.btnAplicar = new System.Windows.Forms.Button();
+            this.btnExaminar = new System.Windows.Forms.Button();
+            this.pbxImagenFondo = new System.Windows.Forms.PictureBox();
+            this.lblImagenFondo = new System.Windows.Forms.Label();
             this.txtContrasenia = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtBbdd = new System.Windows.Forms.TextBox();
             this.txtServidor = new System.Windows.Forms.TextBox();
-            this.lblImagenFondo = new System.Windows.Forms.Label();
-            this.pbxImagenFondo = new System.Windows.Forms.PictureBox();
-            this.btnExaminar = new System.Windows.Forms.Button();
-            this.btnAplicar = new System.Windows.Forms.Button();
             this.tbcParametros.SuspendLayout();
             this.tbpServidor.SuspendLayout();
             this.tbpImagenFondo.SuspendLayout();
@@ -152,6 +152,45 @@
             this.tbpImagenFondo.Text = "Imagen de fondo";
             this.tbpImagenFondo.UseVisualStyleBackColor = true;
             // 
+            // btnAplicar
+            // 
+            this.btnAplicar.Location = new System.Drawing.Point(174, 180);
+            this.btnAplicar.Name = "btnAplicar";
+            this.btnAplicar.Size = new System.Drawing.Size(84, 27);
+            this.btnAplicar.TabIndex = 3;
+            this.btnAplicar.Text = "Aplicar";
+            this.btnAplicar.UseVisualStyleBackColor = true;
+            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
+            // 
+            // btnExaminar
+            // 
+            this.btnExaminar.Location = new System.Drawing.Point(42, 180);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(84, 27);
+            this.btnExaminar.TabIndex = 2;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
+            // 
+            // pbxImagenFondo
+            // 
+            this.pbxImagenFondo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxImagenFondo.Location = new System.Drawing.Point(25, 32);
+            this.pbxImagenFondo.Name = "pbxImagenFondo";
+            this.pbxImagenFondo.Size = new System.Drawing.Size(136, 126);
+            this.pbxImagenFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxImagenFondo.TabIndex = 1;
+            this.pbxImagenFondo.TabStop = false;
+            // 
+            // lblImagenFondo
+            // 
+            this.lblImagenFondo.AutoSize = true;
+            this.lblImagenFondo.Location = new System.Drawing.Point(22, 8);
+            this.lblImagenFondo.Name = "lblImagenFondo";
+            this.lblImagenFondo.Size = new System.Drawing.Size(87, 13);
+            this.lblImagenFondo.TabIndex = 0;
+            this.lblImagenFondo.Text = "Imagen de fondo";
+            // 
             // txtContrasenia
             // 
             this.txtContrasenia.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Articulos.Properties.Settings.Default, "contrasenia", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -193,45 +232,6 @@
             this.txtServidor.Text = global::Articulos.Properties.Settings.Default.servidor;
             this.txtServidor.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
-            // lblImagenFondo
-            // 
-            this.lblImagenFondo.AutoSize = true;
-            this.lblImagenFondo.Location = new System.Drawing.Point(22, 8);
-            this.lblImagenFondo.Name = "lblImagenFondo";
-            this.lblImagenFondo.Size = new System.Drawing.Size(87, 13);
-            this.lblImagenFondo.TabIndex = 0;
-            this.lblImagenFondo.Text = "Imagen de fondo";
-            // 
-            // pbxImagenFondo
-            // 
-            this.pbxImagenFondo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxImagenFondo.Location = new System.Drawing.Point(25, 32);
-            this.pbxImagenFondo.Name = "pbxImagenFondo";
-            this.pbxImagenFondo.Size = new System.Drawing.Size(136, 126);
-            this.pbxImagenFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxImagenFondo.TabIndex = 1;
-            this.pbxImagenFondo.TabStop = false;
-            // 
-            // btnExaminar
-            // 
-            this.btnExaminar.Location = new System.Drawing.Point(42, 180);
-            this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(84, 27);
-            this.btnExaminar.TabIndex = 2;
-            this.btnExaminar.Text = "Examinar";
-            this.btnExaminar.UseVisualStyleBackColor = true;
-            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
-            // 
-            // btnAplicar
-            // 
-            this.btnAplicar.Location = new System.Drawing.Point(174, 180);
-            this.btnAplicar.Name = "btnAplicar";
-            this.btnAplicar.Size = new System.Drawing.Size(84, 27);
-            this.btnAplicar.TabIndex = 3;
-            this.btnAplicar.Text = "Aplicar";
-            this.btnAplicar.UseVisualStyleBackColor = true;
-            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
-            // 
             // ParametrosDelSistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,6 +239,7 @@
             this.ClientSize = new System.Drawing.Size(354, 280);
             this.Controls.Add(this.tbcParametros);
             this.Name = "ParametrosDelSistema";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParametrosDelSistema";
             this.tbcParametros.ResumeLayout(false);
             this.tbpServidor.ResumeLayout(false);

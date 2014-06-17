@@ -15,12 +15,12 @@ namespace Articulos
         private SqlConnection miConexion;
         private Menu miMenu;
 
-        public ParametrosDelSistema(SqlConnection miConex, Menu menu)
+        public ParametrosDelSistema(SqlConnection miConex,Menu menu)
         {
             InitializeComponent();
             miConexion = miConex;
             miMenu = menu;
-            MessageBox.Show(miMenu.ToString());
+            //MessageBox.Show(this.Modal.ToString());
         }
 
         private void txtServidor_TextChanged(object sender, EventArgs e)
@@ -58,29 +58,23 @@ namespace Articulos
                 Articulos.Properties.Settings.Default.Save();
                 //cierro la conexión porque si está abierta una conexión no
                 //nos deja cambiar su connection string
-                miConexion.Close();
+                //miConexion.Close();
                 //obtengo el connection string con las nuevas configuraciones
                 //utilizando el método estátito asociado a la clase Menu
                 //(al establecer el método como Public y Static se puede llamar
                 //de esta manera especial)
 
-                miConexion.ConnectionString = Articulos.Menu.ObtenerCadenaConexion();
+                //miConexion.ConnectionString = Articulos.Menu.ObtenerCadenaConexion();
                 
                 //MessageBox.Show(miConexion.ConnectionString);
-                try
-                {
-                                        
-                    miConexion.Open();
-                    MessageBox.Show("Conexión establecida con éxito");
-                    this.Close();
-                }
-                catch
-                {
-                    MessageBox.Show("No se pudo establecer la conexión...");
-                }
+
+                
+                miMenu.EstablecerConexionYComando(this);
+            
                 //enciendo el formulario despues de que se resuelva si
                 //se conecta o no
                 this.Enabled = true;
+                
             }
             else
             {

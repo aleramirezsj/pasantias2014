@@ -41,9 +41,12 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nudAncho = new System.Windows.Forms.NumericUpDown();
+            this.pbxImagenArticulo = new System.Windows.Forms.PictureBox();
+            this.btnExaminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudLargo)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAncho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDetalle
@@ -122,8 +125,6 @@
             this.nudLargo.Name = "nudLargo";
             this.nudLargo.Size = new System.Drawing.Size(120, 20);
             this.nudLargo.TabIndex = 3;
-           
-            
             // 
             // label1
             // 
@@ -161,12 +162,32 @@
             this.nudAncho.Size = new System.Drawing.Size(120, 20);
             this.nudAncho.TabIndex = 11;
             // 
+            // pbxImagenArticulo
+            // 
+            this.pbxImagenArticulo.Location = new System.Drawing.Point(349, 23);
+            this.pbxImagenArticulo.Name = "pbxImagenArticulo";
+            this.pbxImagenArticulo.Size = new System.Drawing.Size(127, 106);
+            this.pbxImagenArticulo.TabIndex = 12;
+            this.pbxImagenArticulo.TabStop = false;
+            // 
+            // btnExaminar
+            // 
+            this.btnExaminar.Location = new System.Drawing.Point(378, 156);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(75, 23);
+            this.btnExaminar.TabIndex = 13;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 368);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.btnExaminar);
+            this.Controls.Add(this.pbxImagenArticulo);
             this.Controls.Add(this.nudAncho);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudLargo);
@@ -184,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudLargo)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudAncho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +225,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown nudAncho;
+        private System.Windows.Forms.PictureBox pbxImagenArticulo;
+        private System.Windows.Forms.Button btnExaminar;
     }
 }

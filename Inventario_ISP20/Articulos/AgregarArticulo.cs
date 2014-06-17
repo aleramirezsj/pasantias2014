@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Articulos
 {
@@ -21,21 +22,33 @@ namespace Articulos
             
             
         }
+        public AgregarArticulo()
+        {
+
+        }
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
             miComando.CommandText = "dbo.insertar_articulo";
+            miComando.Parameters.Clear();
             //agregamos los parametros que necesita el procedimiento
             //insertar_articulo
+            MemoryStream imagenStream = new MemoryStream();
+            pbxImagenArticulo.Image.Save(imagenStream, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] imagenBytes = imagenStream.ToArray();
 
 
             miComando.Parameters.AddWithValue("@det",txtDetalle.Text);
             miComando.Parameters.AddWithValue("@obs", txtObservaciones.Text);
             miComando.Parameters.AddWithValue("@lar", nudLargo.Value);
             miComando.Parameters.AddWithValue("@anc", nudAncho.Value);
+            miComando.Parameters.AddWithValue("@img", imagenBytes);
 
             if (miComando.ExecuteNonQuery() == 1)
+            {
                 MessageBox.Show("Datos guardados correctamente");
+                this.Close();
+            }
             else
                 MessageBox.Show("Ha ocurrido un problema");
         }
@@ -88,6 +101,18 @@ namespace Articulos
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnExaminar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdAbrirArchivo = new OpenFileDialog();
+            string filtro = "JPG (*.jpg)|*.jpg";
+            filtro += "|GIF (*.gif)|*.gif";
+            filtro += "|PNG (*.png)|*.png";
+            filtro += "|BMP (*.bmp)|*.bmp";
+            ofdAbrirArchivo.Filter = filtro;
+            ofdAbrirArchivo.ShowDialog();
+            pbxImagenArticulo.ImageLocation = ofdAbrirArchivo.FileName;
         }
 
 

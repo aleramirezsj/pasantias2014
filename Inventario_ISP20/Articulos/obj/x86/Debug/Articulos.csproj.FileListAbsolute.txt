@@ -13,3 +13,5 @@ C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\MisCl
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.GestionArticulos.resources
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\Articulos.exe.config
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.ParametrosDelSistema.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.Chat.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.EditarArticulo.resources

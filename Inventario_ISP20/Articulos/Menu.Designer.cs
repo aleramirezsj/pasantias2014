@@ -40,6 +40,7 @@
             this.stsBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tslMensajeBarraEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.pbxImagenFondo = new System.Windows.Forms.PictureBox();
+            this.editarArtículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuInventario.SuspendLayout();
             this.stsBarraEstado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenFondo)).BeginInit();
@@ -61,7 +62,8 @@
             // 
             this.artículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoArtículoToolStripMenuItem,
-            this.listaDeArtículosToolStripMenuItem});
+            this.listaDeArtículosToolStripMenuItem,
+            this.editarArtículoToolStripMenuItem});
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
             this.artículosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.artículosToolStripMenuItem.Text = "Artículos";
@@ -78,6 +80,7 @@
             this.listaDeArtículosToolStripMenuItem.Name = "listaDeArtículosToolStripMenuItem";
             this.listaDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.listaDeArtículosToolStripMenuItem.Text = "Lista de artículos";
+            this.listaDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.listaDeArtículosToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -136,8 +139,16 @@
             this.pbxImagenFondo.Location = new System.Drawing.Point(0, 24);
             this.pbxImagenFondo.Name = "pbxImagenFondo";
             this.pbxImagenFondo.Size = new System.Drawing.Size(478, 216);
+            this.pbxImagenFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImagenFondo.TabIndex = 2;
             this.pbxImagenFondo.TabStop = false;
+            // 
+            // editarArtículoToolStripMenuItem
+            // 
+            this.editarArtículoToolStripMenuItem.Name = "editarArtículoToolStripMenuItem";
+            this.editarArtículoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.editarArtículoToolStripMenuItem.Text = "Editar artículo";
+            this.editarArtículoToolStripMenuItem.Click += new System.EventHandler(this.editarArtículoToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -177,6 +188,7 @@
         private System.Windows.Forms.StatusStrip stsBarraEstado;
         private System.Windows.Forms.ToolStripStatusLabel tslMensajeBarraEstado;
         private System.Windows.Forms.PictureBox pbxImagenFondo;
+        private System.Windows.Forms.ToolStripMenuItem editarArtículoToolStripMenuItem;
     }
 }
 
