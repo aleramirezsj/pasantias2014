@@ -38,8 +38,11 @@
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.txtDetalle = new System.Windows.Forms.TextBox();
+            this.pbxImagenArticulo = new System.Windows.Forms.PictureBox();
+            this.btnExaminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudAncho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // nudAncho
@@ -138,11 +141,32 @@
             this.txtDetalle.Size = new System.Drawing.Size(203, 20);
             this.txtDetalle.TabIndex = 12;
             // 
+            // pbxImagenArticulo
+            // 
+            this.pbxImagenArticulo.Location = new System.Drawing.Point(388, 24);
+            this.pbxImagenArticulo.Name = "pbxImagenArticulo";
+            this.pbxImagenArticulo.Size = new System.Drawing.Size(141, 122);
+            this.pbxImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxImagenArticulo.TabIndex = 22;
+            this.pbxImagenArticulo.TabStop = false;
+            // 
+            // btnExaminar
+            // 
+            this.btnExaminar.Location = new System.Drawing.Point(421, 175);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(75, 23);
+            this.btnExaminar.TabIndex = 23;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
+            // 
             // EditarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 311);
+            this.ClientSize = new System.Drawing.Size(610, 311);
+            this.Controls.Add(this.btnExaminar);
+            this.Controls.Add(this.pbxImagenArticulo);
             this.Controls.Add(this.nudAncho);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudLargo);
@@ -157,6 +181,7 @@
             this.Text = "EditarArticulo";
             ((System.ComponentModel.ISupportInitialize)(this.nudAncho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +199,7 @@
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.TextBox txtDetalle;
+        private System.Windows.Forms.PictureBox pbxImagenArticulo;
+        private System.Windows.Forms.Button btnExaminar;
     }
 }

@@ -40,21 +40,25 @@
             // 
             // dataGridArticulos
             // 
+            this.dataGridArticulos.AllowUserToAddRows = false;
+            this.dataGridArticulos.AllowUserToDeleteRows = false;
             this.dataGridArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridArticulos.Location = new System.Drawing.Point(12, 31);
             this.dataGridArticulos.Name = "dataGridArticulos";
+            this.dataGridArticulos.ReadOnly = true;
             this.dataGridArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridArticulos.Size = new System.Drawing.Size(349, 209);
+            this.dataGridArticulos.Size = new System.Drawing.Size(350, 209);
             this.dataGridArticulos.TabIndex = 0;
             this.dataGridArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridArticulos_CellClick);
+            this.dataGridArticulos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridArticulos_RowEnter);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAgregar.Location = new System.Drawing.Point(111, 279);
+            this.btnAgregar.Location = new System.Drawing.Point(112, 265);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 1;
@@ -65,7 +69,7 @@
             // btnEditar
             // 
             this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEditar.Location = new System.Drawing.Point(192, 279);
+            this.btnEditar.Location = new System.Drawing.Point(193, 265);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 2;
@@ -76,7 +80,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEliminar.Location = new System.Drawing.Point(273, 279);
+            this.btnEliminar.Location = new System.Drawing.Point(274, 265);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
@@ -87,7 +91,7 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnSalir.Location = new System.Drawing.Point(354, 279);
+            this.btnSalir.Location = new System.Drawing.Point(355, 265);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -107,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 314);
+            this.ClientSize = new System.Drawing.Size(522, 300);
             this.Controls.Add(this.pbxImagenArticulo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -116,6 +120,7 @@
             this.Controls.Add(this.dataGridArticulos);
             this.Name = "GestionArticulos";
             this.Text = "GestionArticulos";
+            this.Shown += new System.EventHandler(this.GestionArticulos_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).EndInit();
             this.ResumeLayout(false);

@@ -106,13 +106,16 @@ namespace Articulos
         private void btnExaminar_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofdAbrirArchivo = new OpenFileDialog();
-            string filtro = "JPG (*.jpg)|*.jpg";
+            string filtro = "Todas las imágenes|*.jpg;*.png;*.gif;*.bmp";
+            filtro+="|JPG (*.jpg)|*.jpg";
             filtro += "|GIF (*.gif)|*.gif";
             filtro += "|PNG (*.png)|*.png";
             filtro += "|BMP (*.bmp)|*.bmp";
             ofdAbrirArchivo.Filter = filtro;
             ofdAbrirArchivo.ShowDialog();
-            pbxImagenArticulo.ImageLocation = ofdAbrirArchivo.FileName;
+            if (ofdAbrirArchivo.FileName != "")
+                pbxImagenArticulo.ImageLocation = ofdAbrirArchivo.FileName;
+            
         }
 
 
