@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using MisClases;
 
 namespace Articulos
 {
@@ -16,6 +17,7 @@ namespace Articulos
         SqlCommand miComando;
         DataTable tablaArticulos;
         SqlDataReader readerArticulos;
+        
 
         public GestionArticulos(SqlCommand miComand)
         {
@@ -54,13 +56,16 @@ namespace Articulos
             //obtenemos la fila seleccionada actualmente
             int filaSeleccionada = dataGridArticulos.CurrentCell.RowIndex;
             
-            EditarArticulo editarArticulo = new EditarArticulo(miComando, idSeleccionado);
+            EditarArticuloMiWebCam editarArticulo = new EditarArticuloMiWebCam(miComando, idSeleccionado);
             editarArticulo.ShowDialog();
             
             CargarGrilla();
 
-            dataGridArticulos.Rows[0].Selected = false;
-            dataGridArticulos.Rows[filaSeleccionada].Selected = true;
+            
+            //dataGridArticulos.Rows[0].Selected = false;
+            //dataGridArticulos.Rows[filaSeleccionada].Selected = true;
+            //definimos la celda actual para hacer que CurrentRow se actualice 
+            dataGridArticulos.CurrentCell = dataGridArticulos[0, filaSeleccionada];
 
             //actualizamos la imagen del articulo modificado
             DataGridViewCellEventArgs celdaSeleccionada = new DataGridViewCellEventArgs(1,filaSeleccionada);
@@ -83,13 +88,9 @@ namespace Articulos
                 miComando.CommandText="dbo.eliminar_articulo";
                 miComando.Parameters.Clear();
                 miComando.Parameters.AddWithValue("id_eli", idSeleccionado);
-                if (miComando.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("Artículo eliminado correctamente");
+
+                if (Utiles.EjecutarComandoEliminar(miComando, "Artículo eliminado correctamente"))
                     CargarGrilla();
-                }
-                else
-                    MessageBox.Show("Ha ocurrido un problema al eliminar");
             }
         }
 
@@ -139,7 +140,7 @@ namespace Articulos
             //simulamos hacer un clic en la grilla llamando al método CellClick
             //el método necesita de 2 argumentos, la grilla en si misma, y un objeto
             //del tipo DataGridViewCellEventArgs que dice cual es la celda en la cual 
-            //se hizo un click, nosotros le decimos que fue en la fila 1, columna 1
+            //se hizo un click, nosotros le decimos que fue en la fila 0, columna 0
             //con esto logramos que se cargue la imagen en pbxImagenArticulo
             DataGridViewCellEventArgs celdaSeleccionada = new DataGridViewCellEventArgs(0, 0);
             dataGridArticulos_CellClick(dataGridArticulos, celdaSeleccionada);

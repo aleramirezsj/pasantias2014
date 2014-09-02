@@ -8,10 +8,12 @@ C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\G
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.exe
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.pdb
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.AgregarArticulo.resources
-C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\MisClases.dll
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\MisClases.pdb
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.GestionArticulos.resources
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\Articulos.exe.config
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.ParametrosDelSistema.resources
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.Chat.resources
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.EditarArticulo.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.AgregarArticuloPruebaWebCam.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Debug\MisClases.dll
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Debug\Articulos.EditarArticuloMiWebCam.resources

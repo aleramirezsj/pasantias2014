@@ -1,6 +1,6 @@
 ﻿namespace Articulos
 {
-    partial class AgregarArticulo
+    partial class AgregarArticuloPruebaWebCam
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -41,16 +41,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nudAncho = new System.Windows.Forms.NumericUpDown();
-            this.pbxImagenArticulo = new System.Windows.Forms.PictureBox();
-            this.btnExaminar = new System.Windows.Forms.Button();
-            this.pbxWebcam = new System.Windows.Forms.PictureBox();
-            this.btnIniciarCamara = new System.Windows.Forms.Button();
-            this.btnCapturarFoto = new System.Windows.Forms.Button();
+            this.miWebCamArticulo = new MisClases.MiWebCam();
             ((System.ComponentModel.ISupportInitialize)(this.nudLargo)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAncho)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxWebcam)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDetalle
@@ -88,6 +82,7 @@
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(203, 55);
             this.txtObservaciones.TabIndex = 2;
+            
             // 
             // btnguardar
             // 
@@ -166,67 +161,22 @@
             this.nudAncho.Size = new System.Drawing.Size(120, 20);
             this.nudAncho.TabIndex = 11;
             // 
-            // pbxImagenArticulo
+            // miWebCamArticulo
             // 
-            this.pbxImagenArticulo.Location = new System.Drawing.Point(548, 22);
-            this.pbxImagenArticulo.Name = "pbxImagenArticulo";
-            this.pbxImagenArticulo.Size = new System.Drawing.Size(127, 106);
-            this.pbxImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxImagenArticulo.TabIndex = 12;
-            this.pbxImagenArticulo.TabStop = false;
+            this.miWebCamArticulo.Location = new System.Drawing.Point(350, 22);
+            this.miWebCamArticulo.Name = "miWebCamArticulo";
+            this.miWebCamArticulo.Size = new System.Drawing.Size(266, 167);
+            this.miWebCamArticulo.TabIndex = 12;
+            
             // 
-            // btnExaminar
-            // 
-            this.btnExaminar.Location = new System.Drawing.Point(577, 155);
-            this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(75, 23);
-            this.btnExaminar.TabIndex = 13;
-            this.btnExaminar.Text = "Examinar";
-            this.btnExaminar.UseVisualStyleBackColor = true;
-            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
-            // 
-            // pbxWebcam
-            // 
-            this.pbxWebcam.Location = new System.Drawing.Point(362, 22);
-            this.pbxWebcam.Name = "pbxWebcam";
-            this.pbxWebcam.Size = new System.Drawing.Size(127, 106);
-            this.pbxWebcam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxWebcam.TabIndex = 14;
-            this.pbxWebcam.TabStop = false;
-            // 
-            // btnIniciarCamara
-            // 
-            this.btnIniciarCamara.Location = new System.Drawing.Point(376, 155);
-            this.btnIniciarCamara.Name = "btnIniciarCamara";
-            this.btnIniciarCamara.Size = new System.Drawing.Size(103, 23);
-            this.btnIniciarCamara.TabIndex = 15;
-            this.btnIniciarCamara.Text = "Iniciar cámara";
-            this.btnIniciarCamara.UseVisualStyleBackColor = true;
-            this.btnIniciarCamara.Click += new System.EventHandler(this.btnIniciarCamara_Click);
-            // 
-            // btnCapturarFoto
-            // 
-            this.btnCapturarFoto.Location = new System.Drawing.Point(376, 184);
-            this.btnCapturarFoto.Name = "btnCapturarFoto";
-            this.btnCapturarFoto.Size = new System.Drawing.Size(103, 23);
-            this.btnCapturarFoto.TabIndex = 16;
-            this.btnCapturarFoto.Text = "Capturar Foto";
-            this.btnCapturarFoto.UseVisualStyleBackColor = true;
-            this.btnCapturarFoto.Visible = false;
-            this.btnCapturarFoto.Click += new System.EventHandler(this.btnCapturarFoto_Click);
-            // 
-            // AgregarArticulo
+            // AgregarArticuloPruebaWebCam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 368);
             this.ContextMenuStrip = this.contextMenuStrip1;
-            this.Controls.Add(this.btnCapturarFoto);
-            this.Controls.Add(this.btnIniciarCamara);
-            this.Controls.Add(this.pbxWebcam);
+            this.Controls.Add(this.miWebCamArticulo);
             this.Controls.Add(this.nudAncho);
-            this.Controls.Add(this.btnExaminar);
-            this.Controls.Add(this.pbxImagenArticulo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudLargo);
             this.Controls.Add(this.lbllargo);
@@ -236,16 +186,13 @@
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.lblDetalle);
             this.Controls.Add(this.txtDetalle);
-            this.Name = "AgregarArticulo";
+            this.Name = "AgregarArticuloPruebaWebCam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Articulo";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AgregarArticulo_FormClosing);
             this.Load += new System.EventHandler(this.AgregarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudLargo)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudAncho)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxWebcam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,10 +212,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown nudAncho;
-        private System.Windows.Forms.PictureBox pbxImagenArticulo;
-        private System.Windows.Forms.Button btnExaminar;
-        private System.Windows.Forms.PictureBox pbxWebcam;
-        private System.Windows.Forms.Button btnIniciarCamara;
-        private System.Windows.Forms.Button btnCapturarFoto;
+        private MisClases.MiWebCam miWebCamArticulo;
     }
 }

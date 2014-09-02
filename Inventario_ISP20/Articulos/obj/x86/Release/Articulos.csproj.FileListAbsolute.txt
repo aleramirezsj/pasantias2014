@@ -13,3 +13,8 @@ C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Release\Mis
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Release\MisClases.pdb
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.GestionArticulos.resources
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.ParametrosDelSistema.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Release\AForge.Video.DirectShow.dll
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\bin\Release\AForge.Video.dll
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.Chat.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.AgregarArticuloPruebaWebCam.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\Articulos\obj\x86\Release\Articulos.EditarArticulo.resources

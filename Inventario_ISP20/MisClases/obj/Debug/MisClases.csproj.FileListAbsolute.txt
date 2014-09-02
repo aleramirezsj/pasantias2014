@@ -1,10 +1,8 @@
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\ResolveAssemblyReference.cache
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\bin\Debug\MisClases.dll
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\bin\Debug\MisClases.pdb
-C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\ResolveAssemblyReference.cache
-C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\MisClases.TextBoxEnter.resources
+C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\MisClases.MiWebCam.resources
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\GenerateResource.read.1.tlog
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\GenerateResource.write.1.tlog
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\MisClases.dll
 C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\MisClases.pdb
-C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\MisClases.MiTextBoxEnter.resources
-C:\Rubén Alejandro Ramirez\Pasantias\Inventario_ISP20\MisClases\obj\Debug\MisClases.TextBoxEnterMio.resources

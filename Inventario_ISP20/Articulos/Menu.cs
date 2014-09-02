@@ -161,6 +161,19 @@ namespace Articulos
             editarArticulo.ShowDialog();
         }
 
+        private void nuevoArtículoClaseMiWebCamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarArticuloPruebaWebCam agregarArticulo = new AgregarArticuloPruebaWebCam(miComando);
+            agregarArticulo.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EditarArticuloMiWebCam editarArticulo = new EditarArticuloMiWebCam(miComando,1);
+            editarArticulo.ShowDialog();
+
+        }
+
 
 
 

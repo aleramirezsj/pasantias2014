@@ -34,7 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MisClases">
+    <Reference Include="AForge.Video, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MisClases, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MisClases\bin\Release\MisClases.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -62,11 +71,23 @@
     <Compile Include="Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarArticuloPruebaMiWebCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarArticuloPruebaMiWebCam.Designer.cs">
+      <DependentUpon>AgregarArticuloPruebaMiWebCam.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarArticulo.Designer.cs">
       <DependentUpon>EditarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarArticuloMiWebCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarArticuloMiWebCam.Designer.cs">
+      <DependentUpon>EditarArticuloMiWebCam.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionArticulos.cs">
       <SubType>Form</SubType>
@@ -94,8 +115,14 @@
     <EmbeddedResource Include="Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarArticuloPruebaMiWebCam.resx">
+      <DependentUpon>AgregarArticuloPruebaMiWebCam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarArticulo.resx">
       <DependentUpon>EditarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarArticuloMiWebCam.resx">
+      <DependentUpon>EditarArticuloMiWebCam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionArticulos.resx">
       <DependentUpon>GestionArticulos.cs</DependentUpon>

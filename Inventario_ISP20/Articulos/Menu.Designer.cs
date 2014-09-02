@@ -32,6 +32,9 @@
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoArtículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarArtículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoArtículoClaseMiWebCamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraciónDelServidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +43,6 @@
             this.stsBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tslMensajeBarraEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.pbxImagenFondo = new System.Windows.Forms.PictureBox();
-            this.editarArtículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuInventario.SuspendLayout();
             this.stsBarraEstado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenFondo)).BeginInit();
@@ -63,7 +65,9 @@
             this.artículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoArtículoToolStripMenuItem,
             this.listaDeArtículosToolStripMenuItem,
-            this.editarArtículoToolStripMenuItem});
+            this.editarArtículoToolStripMenuItem,
+            this.nuevoArtículoClaseMiWebCamToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
             this.artículosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.artículosToolStripMenuItem.Text = "Artículos";
@@ -71,16 +75,37 @@
             // nuevoArtículoToolStripMenuItem
             // 
             this.nuevoArtículoToolStripMenuItem.Name = "nuevoArtículoToolStripMenuItem";
-            this.nuevoArtículoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.nuevoArtículoToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.nuevoArtículoToolStripMenuItem.Text = "Nuevo artículo";
             this.nuevoArtículoToolStripMenuItem.Click += new System.EventHandler(this.nuevoArtículoToolStripMenuItem_Click);
             // 
             // listaDeArtículosToolStripMenuItem
             // 
             this.listaDeArtículosToolStripMenuItem.Name = "listaDeArtículosToolStripMenuItem";
-            this.listaDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listaDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.listaDeArtículosToolStripMenuItem.Text = "Lista de artículos";
             this.listaDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.listaDeArtículosToolStripMenuItem_Click);
+            // 
+            // editarArtículoToolStripMenuItem
+            // 
+            this.editarArtículoToolStripMenuItem.Name = "editarArtículoToolStripMenuItem";
+            this.editarArtículoToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.editarArtículoToolStripMenuItem.Text = "Editar artículo";
+            this.editarArtículoToolStripMenuItem.Click += new System.EventHandler(this.editarArtículoToolStripMenuItem_Click);
+            // 
+            // nuevoArtículoClaseMiWebCamToolStripMenuItem
+            // 
+            this.nuevoArtículoClaseMiWebCamToolStripMenuItem.Name = "nuevoArtículoClaseMiWebCamToolStripMenuItem";
+            this.nuevoArtículoClaseMiWebCamToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.nuevoArtículoClaseMiWebCamToolStripMenuItem.Text = "Nuevo artículo - Clase MiWebCam";
+            this.nuevoArtículoClaseMiWebCamToolStripMenuItem.Click += new System.EventHandler(this.nuevoArtículoClaseMiWebCamToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(257, 22);
+            this.toolStripMenuItem1.Text = "Editar artículo - Clase MiWebCam";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -103,8 +128,8 @@
             this.salirDelSistemaToolStripMenuItem,
             this.acercaDeToolStripMenuItem});
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.salirToolStripMenuItem.Text = "Salir...";
             // 
             // salirDelSistemaToolStripMenuItem
             // 
@@ -142,13 +167,6 @@
             this.pbxImagenFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImagenFondo.TabIndex = 2;
             this.pbxImagenFondo.TabStop = false;
-            // 
-            // editarArtículoToolStripMenuItem
-            // 
-            this.editarArtículoToolStripMenuItem.Name = "editarArtículoToolStripMenuItem";
-            this.editarArtículoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.editarArtículoToolStripMenuItem.Text = "Editar artículo";
-            this.editarArtículoToolStripMenuItem.Click += new System.EventHandler(this.editarArtículoToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -189,6 +207,8 @@
         private System.Windows.Forms.ToolStripStatusLabel tslMensajeBarraEstado;
         private System.Windows.Forms.PictureBox pbxImagenFondo;
         private System.Windows.Forms.ToolStripMenuItem editarArtículoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoArtículoClaseMiWebCamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
